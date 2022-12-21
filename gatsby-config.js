@@ -6,7 +6,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
+    siteUrl: "https://www.ghanshyamanuragi.in/",
     title: "Ghanshyam Anuragi - President of District Panchayat Jalaun from BJP",
     author: `Ghanshyam Anuragi`,
     description: "Ghanshyam Anuragi is an Indian politician and a Member of Parliament of India. Currently he is District Panchayat President, Jalaun from Bhartiya Janata Party.",
