@@ -7,9 +7,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
-    title: "Gatsby Contentful Homepage Starter",
-    author: `Gatsby`,
-    description: "A Gatsby Starter for building homepages with Contentful",
+    title: "Ghanshyam Anuragi - President of District Panchayat Jalaun from BJP",
+    author: `Ghanshyam Anuragi`,
+    description: "Ghanshyam Anuragi is an Indian politician and a Member of Parliament of India. Currently he is District Panchayat President, Jalaun from Bhartiya Janata Party.",
   },
   plugins: [
     {
@@ -21,6 +21,37 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-X2MN809TZ6",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // // Enables Google Optimize using your container Id
+        // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // // Enables Google Optimize Experiment ID
+        // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        // // Set Variation ID. 0 for original 1,2,3....
+        // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "www.ghanshyamanuragi.in",
+        // defaults to false
+        enableWebVitalsTracking: true,
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
@@ -28,12 +59,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Contentful Homepage",
-        short_name: "Gatsby",
+        name: "Ghanshyam Anuragi - President of District Panchayat Jalaun from BJP",
+        short_name: "Ghanshyam Anuragi",
         start_url: "/",
         // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
+        background_color: "#FFFFFF",
+        theme_color: "#F47216",
         icon: "src/favicon.png",
       },
     },
