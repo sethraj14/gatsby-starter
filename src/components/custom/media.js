@@ -31,7 +31,7 @@ const Media = props => {
                     {galleryArr.map((key, index) => {
                         return (
                             <SwiperSlide>
-                                {renderImage(index, `/images/media/media_${index+1}.jpeg`)}
+                                {renderImage(index, `/icons/images/media/media_${index+1}.jpeg`)}
                             </SwiperSlide>
                         )
                     })}
