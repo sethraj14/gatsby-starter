@@ -22,21 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-theme-portfolio-minimal",
-      options: {
-        contentDirectory: "./content",
-        blogSettings: {
-          path: "/blog", // Defines the slug for the blog listing page
-          usePathPrefixForArticles: false, // Default true (i.e. path will be /blog/first-article)
-        },
-        // googleAnalytics: {
-        //     trackingId: "UA-XXXXXX-X",
-        //     anonymize: true, // Default true
-        //     environments: ["production", "development"] // Default ["production"]
-        // }
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
