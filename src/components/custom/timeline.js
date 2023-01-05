@@ -1,24 +1,10 @@
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-
-import { EffectFade } from "swiper"
+import {Swiper, SwiperSlide} from "swiper/react"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
 // Import Swiper styles
-
-import journey_1 from "../../../public/images/journey-1.jpeg"
-import journey_2 from "../../../public/images/journey-2.jpeg"
-import journey_3 from "../../../public/images/journey-3.jpeg"
-import journey_4 from "../../../public/images/journey-4.jpeg"
-import journey_5 from "../../../public/images/journey-5.jpeg"
-import journey_6 from "../../../public/images/journey-6.jpeg"
-import journey_7 from "../../../public/images/journey-7.jpeg"
-import journey_8 from "../../../public/images/journey-8.jpeg"
-import journey_9 from "../../../public/images/journey-9.jpeg"
-import { Container, Flex, Section, Text } from "../ui"
+import {Container, Flex, Section, Text} from "../ui"
 
 const Timeline = props => {
   const renderImage = (id, text, year) => {
