@@ -77,24 +77,29 @@ export default function Header() {
         <Flex variant="spaceBetween">
           <NavLink to="/">
             <VisuallyHidden>Home</VisuallyHidden>
-            {/*<BrandLogo />*/}
+            <BrandLogo />
           </NavLink>
           <nav>
-            {/*<FlexList gap={4}>*/}
-            {/*  {navItems &&*/}
-            {/*    navItems.map((navItem) => (*/}
-            {/*      <li key={navItem.id}>*/}
-            {/*        {navItem.navItemType === "Group" ? (*/}
-            {/*          <NavItemGroup*/}
-            {/*            name={navItem.name}*/}
-            {/*            navItems={navItem.navItems}*/}
-            {/*          />*/}
-            {/*        ) : (*/}
-            {/*          <NavLink to={navItem.href}>{navItem.text}</NavLink>*/}
-            {/*        )}*/}
-            {/*      </li>*/}
-            {/*    ))}*/}
-            {/*</FlexList>*/}
+            <FlexList gap={6}>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Home"}</NavLink>
+              </li>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Biography"}</NavLink>
+              </li>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Gallery"}</NavLink>
+              </li>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Media Coverage"}</NavLink>
+              </li>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Apni Rasoi"}</NavLink>
+              </li>
+              <li key={"nav-1"}>
+                <NavLink to={"/#"}>{"Contact"}</NavLink>
+              </li>
+            </FlexList>
           </nav>
           {/*<div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>*/}
         </Flex>
@@ -139,7 +144,7 @@ export default function Header() {
         <div className={mobileNavOverlay}>
           <nav>
             <FlexList responsive variant="stretch">
-              {navItems?.map((navItem) => (
+              {navItems?.map(navItem => (
                 <li key={navItem.id}>
                   {navItem.navItemType === "Group" ? (
                     <NavItemGroup

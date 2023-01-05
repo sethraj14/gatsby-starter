@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
 import SEOHead from "../components/head"
+import Timeline from "../components/custom/timeline";
+import Gallery from "../components/custom/gallery";
+import Media from "../components/custom/media";
 
 export default function Homepage(props) {
   const { homepage } = props.data
@@ -18,6 +21,9 @@ export default function Homepage(props) {
           <Component key={id} {...componentProps} />
         ) : null
       })}
+      <Timeline/>
+      <Gallery/>
+      <Media/>
     </Layout>
   )
 }

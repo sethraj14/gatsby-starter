@@ -14,6 +14,7 @@ import {
 } from "./ui"
 
 export default function Hero(props) {
+  console.log("test", props.h1)
   return (
     <Section>
       <Container>
@@ -27,10 +28,15 @@ export default function Hero(props) {
             )}
           </Box>
           <Box width="half">
-            <Heading as="h1">
-              {props.kicker && <Kicker>{props.kicker}</Kicker>}
-              {props.h1}
-            </Heading>
+            <Text as="h2" variant="heading" >
+              {"डॉ घनश्याम अनुरागी जी"}
+            </Text>
+            <Text as="h2" variant="heading" center={false}>
+              {"पूर्व सांसद"}
+            </Text>
+            <Text as="h2" variant="heading" {...props}>
+              {"अध्यक्ष जिला पंचायत - जालौन"}
+            </Text>
             <Subhead as="h2">{props.subhead}</Subhead>
             {/*<Text as="p">{props.text}</Text>*/}
             {/*<ButtonList links={props.links} />*/}
