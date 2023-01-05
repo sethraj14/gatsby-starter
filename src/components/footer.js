@@ -22,11 +22,6 @@ import {
 import BrandLogo from "./brand-logo"
 
 const socialMedia = {
-  TWITTER: {
-    url: "https://twitter.com",
-    name: "Twitter",
-    icon: <Twitter />,
-  },
   INSTAGRAM: {
     url: "https://instagram.com",
     name: "Instagram",
@@ -37,20 +32,10 @@ const socialMedia = {
     name: "Facebook",
     icon: <Facebook />,
   },
-  YOUTUBE: {
-    url: "https://youtube.com",
-    name: "YouTube",
-    icon: <Youtube />,
-  },
-  GITHUB: {
-    url: "https://github.com",
-    name: "GitHub",
-    icon: <GitHub />,
-  },
-  TWITCH: {
-    url: "https://twitch.tv",
-    name: "Twitch",
-    icon: <Twitch />,
+  TWITTER: {
+    url: "https://twitter.com",
+    name: "Twitter",
+    icon: <Twitter />,
   },
 }
 
@@ -103,7 +88,7 @@ export default function Footer() {
         <Flex variant="start" responsive>
           <NavLink to="/">
             <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
+            {/*<BrandLogo />*/}
           </NavLink>
           <Space />
           <FlexList>
@@ -125,14 +110,14 @@ export default function Footer() {
         </Flex>
         <Space size={5} />
         <Flex variant="start" responsive>
-          <FlexList variant="start" responsive>
-            {links &&
-              links.map((link) => (
-                <li key={link.id}>
-                  <NavLink to={link.href}>{link.text}</NavLink>
-                </li>
-              ))}
-          </FlexList>
+          {/*<FlexList variant="start" responsive>*/}
+          {/*  {links &&*/}
+          {/*    links.map((link) => (*/}
+          {/*      <li key={link.id}>*/}
+          {/*        <NavLink to={link.href}>{link.text}</NavLink>*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*</FlexList>*/}
           <Space />
           <FlexList>
             {meta &&

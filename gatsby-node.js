@@ -212,6 +212,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       kicker: String
       heading: String
       text: String
+      biography: String
       image: HomepageImage
       icon: HomepageImage
       content: [HomepageStat]
@@ -479,6 +480,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       kicker: String
       heading: String
       text: String
+      biography: String
       image: HomepageImage @link(from: "image___NODE")
       icon: HomepageImage @link(from: "icon___NODE")
       content: [HomepageStat] @link(from: "content___NODE")
@@ -623,4 +625,3 @@ exports.createPages = ({ actions }) => {
     component: require.resolve("./src/components/footer.js"),
   })
 }
-      

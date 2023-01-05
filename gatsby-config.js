@@ -7,9 +7,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.ghanshyamanuragi.in/",
-    title: "Ghanshyam Anuragi - President of District Panchayat Jalaun from BJP",
-    author: `Ghanshyam Anuragi`,
-    description: "Ghanshyam Anuragi is an Indian politician and a Member of Parliament of India. Currently he is District Panchayat President, Jalaun from Bhartiya Janata Party.",
+    title: "घनश्याम अनुरागी - पूर्व सांसद, जिला पंचायत अध्यक्ष जालौन, भाजपा",
+    author: `घनश्याम अनुरागी`,
+    description: "घनश्याम अनुरागी एक भारतीय राजनीतिज्ञ और भारत की संसद के सदस्य हैं। वर्तमान में वे भारतीय जनता पार्टी से जिला पंचायत जालौन के अध्यक्ष हैं।",
   },
   plugins: [
     {
@@ -19,6 +19,21 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
+      },
+    },
+    {
+      resolve: "gatsby-theme-portfolio-minimal",
+      options: {
+        contentDirectory: "./content",
+        blogSettings: {
+          path: "/blog", // Defines the slug for the blog listing page
+          usePathPrefixForArticles: false, // Default true (i.e. path will be /blog/first-article)
+        },
+        // googleAnalytics: {
+        //     trackingId: "UA-XXXXXX-X",
+        //     anonymize: true, // Default true
+        //     environments: ["production", "development"] // Default ["production"]
+        // }
       },
     },
     {

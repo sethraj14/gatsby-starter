@@ -18,7 +18,7 @@ export default function Hero(props) {
     <Section>
       <Container>
         <Flex gap={4} variant="responsive">
-          <Box width="half">
+          <Box width="half" center={true}>
             {props.image && (
               <GatsbyImage
                 alt={props.image.alt}
@@ -32,8 +32,8 @@ export default function Hero(props) {
               {props.h1}
             </Heading>
             <Subhead as="h2">{props.subhead}</Subhead>
-            <Text as="p">{props.text}</Text>
-            <ButtonList links={props.links} />
+            {/*<Text as="p">{props.text}</Text>*/}
+            {/*<ButtonList links={props.links} />*/}
           </Box>
         </Flex>
       </Container>
