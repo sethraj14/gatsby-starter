@@ -71,8 +71,8 @@ export default function Header() {
   }, [isOpen])
 
   return (
-    <header>
-      <Container className={desktopHeaderNavWrapper}>
+    <header style={{backgroundColor: 'white'}}>
+      <Container className={desktopHeaderNavWrapper} >
         <Space size={2} />
         <Flex variant="spaceBetween">
           <NavLink to="/">
@@ -81,22 +81,22 @@ export default function Header() {
           </NavLink>
           <nav>
             <FlexList gap={6}>
-              <li key={"nav-1"}>
+              <li key={"nav-1"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Home"}</NavLink>
               </li>
-              <li key={"nav-1"}>
+              <li key={"nav-2"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Biography"}</NavLink>
               </li>
-              <li key={"nav-1"}>
+              <li key={"nav-3"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Gallery"}</NavLink>
               </li>
-              <li key={"nav-1"}>
+              <li key={"nav-4"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Media Coverage"}</NavLink>
               </li>
-              <li key={"nav-1"}>
+              <li key={"nav-5"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Apni Rasoi"}</NavLink>
               </li>
-              <li key={"nav-1"}>
+              <li key={"nav-6"} style={{color: '#F47216'}}>
                 <NavLink to={"/#"}>{"Contact"}</NavLink>
               </li>
             </FlexList>
