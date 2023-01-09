@@ -25,7 +25,7 @@ const Timeline = props => {
 
   return (
     <Section>
-      <Container width="fullbleed">
+      <Container>
         <Text as="h2" variant="heading">
           {"Timeline"}
         </Text>

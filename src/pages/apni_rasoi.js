@@ -12,6 +12,10 @@ import Gallery from "../components/custom/gallery";
 import {Box, Container, Flex, Section, Subhead, Text} from "../components/ui";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
+const bio = "अपनी रसोई नामक मुहिम चला कर dr ghanshyam anuragi Ji जरूरतमंद और गंभीर परिस्थितियों से जूझ रहे लोगो के लिए भोजन का निज निवास पर प्रबंध कर रहे है जिसके तहत वह रोजाना 800–900 जरूरतमंद लोगों को स्वच्छ–स्वादिष्ट भोजन वितरित करवाते है । \n" +
+    "जिसकी शुरुवात उन्होंने 8July2022 में भारत जन सेवा फाउंडेशन के अंतर्गत की। \n" + "<br/><br/>" +
+    "इस शुभ और समाज के प्रति समर्पित अपनी रसोई नामक मुहीम का उद्घाटन कैबिनेट मंत्री उत्तर प्रदेश राकेश सचान जी तथा पूर्व उप मुख्यमंत्री उत्तर प्रदेश दिनेश शर्मा जी के द्वारा किया गया।"
+
 const image = {
     "id": "358a70d6-cf59-5894-b0c4-a2bbc9391bc2",
     "gatsbyImageData": {
@@ -55,10 +59,10 @@ export default function ApniRasoi(props) {
                         </Box>
                         <Box width="half">
                             <Text as="h2" variant="heading" >
-                                {"घनश्याम अनुरागी ने ठाना है"}
+                                {"\"घनश्याम अनुरागी ने ठाना है"}
                             </Text>
                             <Text as="h2" variant="heading" center={false}>
-                                {"हर भुखे को भोजन खिलाना है"}
+                                {"हर भुखे को भोजन खिलाना है\""}
                             </Text>
                         </Box>
                     </Flex>
@@ -68,7 +72,7 @@ export default function ApniRasoi(props) {
                 const { id, blocktype, ...componentProps } = block
                 const Component = sections[blocktype] || Fallback
                 return ["HomepageStatList"].includes(blocktype) ? (
-                    <Component key={id} {...componentProps} />
+                    <Component key={id} {...componentProps} bio={bio} />
                 ) : null
             })}
         </Layout>
