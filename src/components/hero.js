@@ -14,7 +14,6 @@ import {
 } from "./ui"
 
 export default function Hero(props) {
-  console.log("test", props.h1)
   return (
     <Section>
       <Container>

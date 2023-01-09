@@ -5,7 +5,8 @@ globalStyle("body", {
   margin: 0,
   fontFamily: theme.fonts.text,
   color: theme.colors.text,
-  backgroundColor: theme.colors.background,
+  backgroundImage: 'linear-gradient(to bottom, #f47216, #ff7c6c, #ff97ad, #ffb9de, #fcdafa, #eadeff, #d9e2ff, #cbe5ff, #86d8f5, #14ccd5, #00bb9b, #00a650)',
+  // background: 'rgb(255,255,255)',
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
 })

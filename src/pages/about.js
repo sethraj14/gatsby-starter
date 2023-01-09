@@ -4,20 +4,26 @@ import Layout from "../components/layout"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
 import SEOHead from "../components/head"
+import StatList from "../components/stat-list";
 
 export default function About(props) {
-  const { aboutPage } = props.data
+  const {aboutPage} = props.data
 
   return (
-    <Layout>
-      {aboutPage.blocks.map((block) => {
-        const { id, blocktype, ...componentProps } = block
-        const Component = sections[blocktype] || Fallback
-        return <Component key={id} {...componentProps} />
-      })}
-    </Layout>
+      <Layout>
+        {aboutPage.blocks.map((block) => {
+          const {id, blocktype, ...componentProps} = block
+          const Component = sections[blocktype] || Fallback
+          return ["AboutHero"].includes(blocktype) ? (
+              <Component key={id} {...componentProps} />
+          ) : null
+        })}
+        <StatList/>
+      </Layout>
   )
 }
+
+
 export const Head = (props) => {
   const { aboutPage } = props.data
   return <SEOHead {...aboutPage} />

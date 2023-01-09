@@ -25,17 +25,17 @@ const socialMedia = {
   INSTAGRAM: {
     url: "https://instagram.com",
     name: "Instagram",
-    icon: <Instagram />,
+    icon: <Instagram color={'#F47216'}/>,
   },
   FACEBOOK: {
     url: "https://facebook.com",
     name: "Facebook",
-    icon: <Facebook />,
+    icon: <Facebook color={'#F47216'}/>,
   },
   TWITTER: {
     url: "https://twitter.com",
     name: "Twitter",
-    icon: <Twitter />,
+    icon: <Twitter color={'#F47216'}/>,
   },
 }
 
@@ -83,7 +83,7 @@ export default function Footer() {
   const { links, meta, socialLinks, copyright } = data.layout.footer
 
   return (
-    <Box as="footer" paddingY={4}>
+    <Box as="footer" paddingY={4} style={{backgroundColor: 'white'}}>
       <Container>
         <Flex variant="start" responsive>
           <NavLink to="/">
@@ -97,7 +97,7 @@ export default function Footer() {
                 const url = getSocialURL(link)
                 return (
                   url && (
-                    <li key={link.id}>
+                    <li key={link.id} color={'#F47216'}>
                       <IconLink to={url}>
                         <VisuallyHidden>{getSocialName(link)}</VisuallyHidden>
                         {getSocialIcon(link)}
@@ -122,14 +122,14 @@ export default function Footer() {
           <FlexList>
             {meta &&
               meta.map((link) => (
-                <li key={link.id}>
+                <li key={link.id} style={{color:'#F47216'}}>
                   <NavLink to={link.href}>
                     <Text variant="small">{link.text}</Text>
                   </NavLink>
                 </li>
               ))}
           </FlexList>
-          <Text variant="small">{copyright}</Text>
+          <Text variant="small" style={{color:'#F47216'}}>{copyright}</Text>
         </Flex>
       </Container>
       <Space size={3} />

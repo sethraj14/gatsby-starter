@@ -1,10 +1,11 @@
 import * as React from "react"
-import {Swiper, SwiperSlide} from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
 import "swiper/css/effect-fade"
 // Import Swiper styles
-import {Container, Flex, Section, Text} from "../ui"
+import { Container, Flex, Section, Text } from "../ui"
+import { Autoplay, Navigation, Pagination } from "swiper"
 
 const Timeline = props => {
   const renderImage = (id, text, year) => {
@@ -21,6 +22,7 @@ const Timeline = props => {
       </Flex>
     )
   }
+
   return (
     <Section>
       <Container width="fullbleed">
@@ -28,8 +30,35 @@ const Timeline = props => {
           {"Timeline"}
         </Text>
         <Swiper
+          modules={[Autoplay, Navigation, Pagination]}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
           spaceBetween={30}
           slidesPerView={5}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              centeredSlides: true,
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            980: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={swiper => console.log(swiper)}
         >
@@ -41,25 +70,13 @@ const Timeline = props => {
             )}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(
-              2,
-              "Elected Jila panchayat sadashya Jalalpur",
-              2000
-            )}
+            {renderImage(2, "Elected Jila panchayat sadashya Jalalpur", 2000)}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(
-              3,
-              "Elected Adyaksh Jila panchayat Hamirpur",
-              2000
-            )}
+            {renderImage(3, "Elected Adyaksh Jila panchayat Hamirpur", 2000)}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(
-              4,
-              "Elected Member of parliament (Jalaun 45)",
-              2009
-            )}
+            {renderImage(4, "Elected Member of parliament (Jalaun 45)", 2009)}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
@@ -76,11 +93,7 @@ const Timeline = props => {
             )}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(
-              7,
-              "Elected adyaksh Jila Panchayat (jalaun)",
-              2021
-            )}
+            {renderImage(7, "Elected adyaksh Jila Panchayat (jalaun)", 2021)}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
@@ -110,7 +123,7 @@ const classes = {
     alignItems: "center",
     padding: 20,
     borderRadius: 12,
-    width: 240,
+    width: 220,
     height: 200,
     backgroundColor: "rgb(0,0,0,0.3)",
   },
@@ -120,12 +133,12 @@ const classes = {
     textAlign: "center",
     color: "#FFFFFF",
   },
-  wrapper:{
-    flexDirection: 'column',
-    alignItems: 'center'
+  wrapper: {
+    flexDirection: "column",
+    alignItems: "center",
   },
   year: {
-    fontWeight: 'bold',
-    color: 'white'
-  }
+    fontWeight: "bold",
+    color: "white",
+  },
 }

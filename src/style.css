@@ -1,0 +1,25 @@
+.swiper-button-next {
+    color: #FFFFFF;
+}
+
+.swiper-button-prev{
+    color: #FFFFFF;
+}
+
+.--swiper-theme-color{
+    color: #FFFFFF !important;
+}
+
+.swiper{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 0px;
+}
+/*.swiper-button-next {*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% auto;*/
+/*    background-position: center;*/
+/*}*/

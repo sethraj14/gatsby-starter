@@ -82,23 +82,23 @@ export default function Header() {
           <nav>
             <FlexList gap={6}>
               <li key={"nav-1"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Home"}</NavLink>
+                <NavLink to={"/"}>{"Home"}</NavLink>
               </li>
               <li key={"nav-2"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Biography"}</NavLink>
+                <NavLink to={"/about"}>{"Biography"}</NavLink>
               </li>
               <li key={"nav-3"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Gallery"}</NavLink>
+                <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
               <li key={"nav-4"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Media Coverage"}</NavLink>
+                <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
               <li key={"nav-5"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Apni Rasoi"}</NavLink>
+                <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
               </li>
-              <li key={"nav-6"} style={{color: '#F47216'}}>
-                <NavLink to={"/#"}>{"Contact"}</NavLink>
-              </li>
+              {/*<li key={"nav-6"} style={{color: '#F47216'}}>*/}
+              {/*  <NavLink to={"/contact"}>{"Contact"}</NavLink>*/}
+              {/*</li>*/}
             </FlexList>
           </nav>
           {/*<div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>*/}
@@ -114,7 +114,7 @@ export default function Header() {
           >
             <NavLink to="/">
               <VisuallyHidden>Home</VisuallyHidden>
-              {/*<BrandLogo />*/}
+              <BrandLogo width={40} height={40}/>
             </NavLink>
           </span>
           <Flex>
@@ -134,7 +134,7 @@ export default function Header() {
                   mobileNavSVGColorWrapper[isOpen ? "reversed" : "primary"]
                 }
               >
-                {isOpen ? <X /> : <Menu />}
+                {isOpen ? <X /> : <Menu color={"#F47216"}/>}
               </InteractiveIcon>
             </Nudge>
           </Flex>
@@ -144,20 +144,24 @@ export default function Header() {
         <div className={mobileNavOverlay}>
           <nav>
             <FlexList responsive variant="stretch">
-              {navItems?.map(navItem => (
-                <li key={navItem.id}>
-                  {navItem.navItemType === "Group" ? (
-                    <NavItemGroup
-                      name={navItem.name}
-                      navItems={navItem.navItems}
-                    />
-                  ) : (
-                    <NavLink to={navItem.href} className={mobileNavLink}>
-                      {navItem.text}
-                    </NavLink>
-                  )}
-                </li>
-              ))}
+              <li key={"nav-1"} className={mobileNavLink} style={{color: '#F47216'}}>
+                <NavLink to={"/"}>{"Home"}</NavLink>
+              </li>
+              <li key={"nav-2"} className={mobileNavLink} style={{color: '#F47216'}}>
+                <NavLink to={"/about"}>{"Biography"}</NavLink>
+              </li>
+              <li key={"nav-3"} className={mobileNavLink}  style={{color: '#F47216'}}>
+                <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
+              </li>
+              <li key={"nav-4"} className={mobileNavLink} style={{color: '#F47216'}}>
+                <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
+              </li>
+              <li key={"nav-5"} className={mobileNavLink} style={{color: '#F47216'}}>
+                <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
+              </li>
+              {/*<li key={"nav-6"} className={mobileNavLink} style={{color: '#F47216'}}>*/}
+              {/*  <NavLink to={"/contact"}>{"Contact"}</NavLink>*/}
+              {/*</li>*/}
             </FlexList>
           </nav>
         </div>
