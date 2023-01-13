@@ -23,3 +23,92 @@
 /*    background-size: 100% auto;*/
 /*    background-position: center;*/
 /*}*/
+
+
+
+.animation {
+    padding-top: 10px;
+    height:70px;
+    overflow:hidden;
+    margin-left: 0rem;
+}
+
+.animation > h2 > h2 {
+    /*padding: 0.25rem 0.75rem;*/
+    height:40px;
+    margin-bottom: 10px;
+    display:inline-block;
+}
+
+.animation h2:first-child {
+    margin-bottom: 28px;
+    margin-top: 0px;
+    animation: text-animation-1 8s infinite;
+    animation-delay: 4s;
+}
+
+.first h2 {
+    /*background-color:#20a7d8;*/
+}
+.second h2 {
+    /*background-color:#CD921E;*/
+}
+
+@keyframes text-animation-1 {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    /*20% {margin-top: -20.62rem;}*/
+    30% {margin-top: -70px;}
+    /*40% {margin-top: -20.24rem;}*/
+    /*60% {margin-top: -20.24rem;}*/
+    70% {margin-top: -70px;}
+    /*80% {margin-top: -20.62rem;}*/
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+}
+
+
+
+.animation-2 {
+    padding-top: 10px;
+    height:220px;
+    overflow:hidden;
+    margin-left: 1rem;
+}
+
+.animation-2 > div > div {
+    /*padding: 0.25rem 0.75rem;*/
+    height:20.81rem;
+    margin-bottom: 20px;
+    display:inline-block;
+}
+
+.animation-2 div:first-child {
+    margin-bottom: 100px;
+    margin-top: 10px;
+    animation: text-animation 8s infinite;
+    animation-delay: 4s;
+}
+
+.first div {
+    /*background-color:#20a7d8;*/
+}
+.second div {
+    /*background-color:#CD921E;*/
+}
+.third div {
+    /*background-color:#c10528;*/
+}
+
+@keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    /*20% {margin-top: -20.62rem;}*/
+    30% {margin-top: -200px;}
+    /*40% {margin-top: -20.24rem;}*/
+    /*60% {margin-top: -20.24rem;}*/
+    70% {margin-top: -200px;}
+    /*80% {margin-top: -20.62rem;}*/
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+}

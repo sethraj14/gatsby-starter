@@ -20,7 +20,7 @@ export default function Homepage(props) {
         const { id, blocktype, ...componentProps } = block
         const Component = sections[blocktype] || Fallback
         return ["HomepageStatList", "HomepageHero"].includes(blocktype) ? (
-          <Component key={id} {...componentProps} />
+          <Component key={id} {...componentProps} withTransition={true}/>
         ) :  null;
       })}
       <Timeline/>

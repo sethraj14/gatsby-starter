@@ -58,6 +58,22 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
     {
+      resolve: "gatsby-plugin-social9-socialshare",
+      options: {
+        content:  "13a0523e4dad4641b015335b2ac1856a",
+        async: true,
+        defer: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 2, // Percentage of an element's area that needs to be visible to launch animation
+        // once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Ghanshyam Anuragi - President of District Panchayat Jalaun from BJP",

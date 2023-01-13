@@ -21,6 +21,7 @@ import "swiper/css/effect-fade"
 // Import Swiper styles
 
 import { Container, NavLink, Section, Text } from "../ui"
+import { colors } from "../../colors.css"
 
 const Gallery = props => {
   const renderImage = (id, image) => {
@@ -38,13 +39,25 @@ const Gallery = props => {
   return (
     <Section>
       <Container>
-        <Text as="h2" variant="heading" style={{ color: "black" }}>
+        <Text
+          data-sal="slide-right"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+          as="h2"
+          variant="heading"
+          style={{ color: colors.background }}
+        >
           {"Gallery"}
         </Text>
         <Swiper
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
           modules={[Autoplay, Navigation, Pagination]}
           autoplay={{
-            delay: 500,
+            delay: 3000,
             pauseOnMouseEnter: true,
             waitForTransition: true,
             disableOnInteraction: false,
@@ -87,11 +100,11 @@ const Gallery = props => {
           onSwiper={swiper => console.log(swiper)}
         >
           {galleryArr.map((key, index) => {
-            return (
+            return [56, 59, 5, 10, 33, 41, 54].includes(index) ? (
               <SwiperSlide>
-                {renderImage(index, `/images/gallery/gallery_${index + 1}.jpg`)}
+                {renderImage(index, `/images/gallery/gallery_${index}.jpg`)}
               </SwiperSlide>
-            )
+            ) : null
           })}
         </Swiper>
       </Container>

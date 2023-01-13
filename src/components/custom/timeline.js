@@ -6,6 +6,7 @@ import "swiper/css/effect-fade"
 // Import Swiper styles
 import { Container, Flex, Section, Text } from "../ui"
 import { Autoplay, Navigation, Pagination } from "swiper"
+import { colors } from "../../colors.css"
 
 const Timeline = props => {
   const renderImage = (id, text, year) => {
@@ -26,13 +27,25 @@ const Timeline = props => {
   return (
     <Section>
       <Container>
-        <Text as="h2" variant="heading">
+        <Text
+          data-sal="slide-right"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+          as="h2"
+          variant="heading"
+          style={{ color: colors.background }}
+        >
           {"Timeline"}
         </Text>
         <Swiper
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
           modules={[Autoplay, Navigation, Pagination]}
           autoplay={{
-            delay: 1000,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           spaceBetween={30}

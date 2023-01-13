@@ -6,6 +6,7 @@ import "swiper/css/effect-fade"
 // Import Swiper styles
 import { Container, NavLink, Section, Text } from "../ui"
 import { Autoplay, Navigation, Pagination } from "swiper"
+import { colors } from "../../colors.css"
 
 const Media = props => {
   const renderImage = (id, image) => {
@@ -22,13 +23,25 @@ const Media = props => {
   return (
     <Section>
       <Container>
-        <Text as="h2" variant="heading">
+        <Text
+          data-sal="slide-right"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+          as="h2"
+          variant="heading"
+          style={{ color: colors.background }}
+        >
           {"Media Coverage"}
         </Text>
         <Swiper
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
           modules={[Autoplay, Navigation, Pagination]}
           autoplay={{
-            delay: 1000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           navigation
@@ -63,11 +76,11 @@ const Media = props => {
           }}
         >
           {galleryArr.map((key, index) => {
-            return (
+            return [46, 49, 61, 71, 27, 33, 37, 40, 54].includes(index) ? (
               <SwiperSlide>
-                {renderImage(index, `/images/media/media_${index + 1}.jpg`)}
+                {renderImage(index, `/images/media/media_${index}.jpg`)}
               </SwiperSlide>
-            )
+            ) : null
           })}
         </Swiper>
       </Container>

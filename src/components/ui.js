@@ -110,9 +110,21 @@ export function Text({
   variant = "body",
   center = false,
   bold = false,
+    withTransition = true,
   ...props
 }) {
-  return (
+  return withTransition ?<Base
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-duration="1000"
+      data-sal-easing="ease"
+      cx={[
+        styles.text[variant],
+        center && styles.text.center,
+        bold && styles.text.bold,
+      ]}
+      {...props}
+  /> : (
     <Base
       cx={[
         styles.text[variant],
