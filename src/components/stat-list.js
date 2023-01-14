@@ -112,14 +112,6 @@ export default function StatList(props) {
               />
             )}
             {!props.bio ? <ButtonList reversed links={buttonLinks} /> : null}
-            {/*<FlexList wrap gap={4}>*/}
-            {/*  {props.content.map((stat) => (*/}
-            {/*    <li key={stat.id}>*/}
-            {/*      <Stat {...stat} />*/}
-            {/*    </li>*/}
-            {/*  ))}*/}
-            {/*</FlexList>*/}
-            {/*<ButtonList links={props.links} reversed />*/}
           </Box>
           <Box
             width="half"
@@ -129,7 +121,14 @@ export default function StatList(props) {
             data-sal-delay="1000"
             data-sal-easing="ease"
           >
-            {props.image ? (
+            {props.img ? (
+              <Nudge right={5} bottom={5}>
+                <GatsbyImage
+                  alt={props.img.alt}
+                  image={getImage(props.img.gatsbyImageData)}
+                />
+              </Nudge>
+            ) : props.image ? (
               <Nudge right={5} bottom={5}>
                 <GatsbyImage
                   alt={props.image.alt}
@@ -181,3 +180,10 @@ export const query = graphql`
     }
   }
 `
+
+const styles = {
+  img: {
+    width: "50%",
+    height: "auto",
+  },
+}

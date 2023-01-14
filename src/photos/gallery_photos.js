@@ -11,7 +11,7 @@ export const photos = [
   },
   {
     src: `/images/gallery/gallery_3.jpg`,
-    width: 3,
+    width: 2,
     height: 2,
   },
   {
@@ -306,6 +306,346 @@ export const photos = [
   },
   {
     src: `/images/gallery/gallery_62.jpg`,
+    width: 2,
+    height: 4,
+  },
+  {
+    src: `/images/gallery/gallery_63.jpg`,
+    width: 3,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_64.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_65.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_66.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_67.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_68.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_69.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_70.jpg`,
+    width: 2,
+    height: 4,
+  },
+  {
+    src: `/images/gallery/gallery_71.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_72.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_73.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_74.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_75.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_76.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_77.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_78.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_79.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_80.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_81.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_82.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_83.jpg`,
+    width: 3,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_84.jpg`,
+    width: 4,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_85.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_86.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_87.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_88.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_89.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_90.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_91.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_92.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_93.jpg`,
+    width: 3,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_93.jpg`,
+    width: 2,
+    height: 4,
+  },
+  {
+    src: `/images/gallery/gallery_94.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_95.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_96.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_97.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_98.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_99.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_100.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_101.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_102.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_103.jpg`,
+    width: 3,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_104.jpg`,
+    width: 3,
+    height: 3,
+  },
+  {
+    src: `/images/gallery/gallery_105.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_106.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_107.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_108.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_109.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_110.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_111.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_112.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_113.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_114.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_115.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_116.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_117.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_118.jpg`,
+    width: 2,
+    height: 5,
+  },
+  {
+    src: `/images/gallery/gallery_119.jpg`,
+    width: 2,
+    height: 5,
+  },
+  {
+    src: `/images/gallery/gallery_120.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_121.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_122.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_123.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_124.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_125.jpg`,
+    width: 2,
+    height: 4,
+  },
+  {
+    src: `/images/gallery/gallery_126.jpg`,
+    width: 2,
+    height: 4,
+  },
+  {
+    src: `/images/gallery/gallery_127.jpg`,
+    width: 4,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_128.jpg`,
+    width: 3,
+    height: 2,
+  },
+  {
+    src: `/images/gallery/gallery_129.jpg`,
     width: 2,
     height: 4,
   },

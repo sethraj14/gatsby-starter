@@ -53,6 +53,32 @@ const bio = "<br/>" +'अनुरागी : व्यक्तित्व\n' 
     '\n' + "<br/><br/>" +
     '# अनुरागी अखिल भारतीय कोली समाज – नई दिल्ली (कोरी समाज) के अखिल भारतीय स्तर के बड़े हैं । कोरी समाज को प्रगति के पथ पर ले जाने के लिए कोली / कोरी समाज के प्रदेश अध्यक्ष, राष्ट्रीय उपाध्यक्ष पद को भी सुशोभित किया । वर्तमान में अनुरागी जी को कोली /  कोरी समाज का कार्यकारी राष्ट्रीय अध्यक्ष हैं । वह ऐसे समाज का अखिल भारतीय स्तर पर प्रतिनिधित्व करते हैं जिस समाज व संगठन के अध्यक्ष भारत गणराज्य के पूर्व महामहिम राष्ट्रपति माननीय श्री रामनाथ कोविंद जी भी रहें हैं ।\n'
 
+
+const img = {
+    "id": "0a8d4e05-d419-5923-a68e-6206f3917487",
+    "gatsbyImageData": {
+        "images": {
+            "sources": [
+                {
+                    "srcSet": "https://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=607&h=990&q=50&fm=webp 607w,\nhttps://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=1215&h=1981&q=50&fm=webp 1215w,\nhttps://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=2429&h=3961&q=50&fm=webp 2429w",
+                    "sizes": "(min-width: 2429px) 2429px, 100vw",
+                    "type": "image/webp"
+                }
+            ],
+            "fallback": {
+                "src": "https://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=2429&h=3961&q=50&fm=png",
+                "srcSet": "https://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=607&h=990&q=50&fm=png 607w,\nhttps://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=1215&h=1981&q=50&fm=png 1215w,\nhttps://images.ctfassets.net/d5ql4rml3t6t/7nCV7i4NBQYcINf8sW3d25/cd2f76dda42c72a128548296c308432c/bio-1.png?w=2429&h=3961&q=50&fm=png 2429w",
+                "sizes": "(min-width: 2429px) 2429px, 100vw"
+            }
+        },
+        "layout": "constrained",
+        "backgroundColor": "#080808",
+        "width": 2429,
+        "height": 3960.9999999999995
+    },
+    "alt": "डॉ घनश्याम अनुरागी जी"
+};
+
 export default function About(props) {
   const {aboutPage} = props.data
 
@@ -61,11 +87,11 @@ export default function About(props) {
         {aboutPage.blocks.map((block) => {
           const {id, blocktype, ...componentProps} = block
           const Component = sections[blocktype] || Fallback
-          return ["AboutHero"].includes(blocktype) ? (
+          return ["AboutHero","AboutPage"].includes(blocktype) ? (
               <Component key={id} {...componentProps} />
-          ) : null
+          ) : null;
         })}
-        <StatList head={'घनश्याम अनुरागी जी की जीवनी'} bio={bio} withTransition={false}/>
+        <StatList head={'घनश्याम अनुरागी जी की जीवनी'} bio={bio} withTransition={false} img={img}/>
       </Layout>
   )
 }

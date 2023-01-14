@@ -39,6 +39,7 @@
     "react-dom": "^18.0.0",
     "react-feather": "^2.0.9",
     "react-images": "^1.2.0-beta.7",
+    "react-instagram-embed": "^3.0.0",
     "react-photo-gallery": "^8.0.0",
     "sharp": "^0.30.5",
     "swiper": "^8.4.5"

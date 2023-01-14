@@ -11,9 +11,7 @@ import '../style.css';
 import Gallery from "../components/custom/gallery";
 
 export default function Homepage(props) {
-  const { homepage } = props.data
-
-
+  const { homepage } = props.data;
   return (
     <Layout>
       {homepage.blocks.map(block => {

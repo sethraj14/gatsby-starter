@@ -5,6 +5,7 @@ import { Container, Section, Text, SuperHeading } from "./ui"
 import * as styles from "./about-hero.css"
 
 export default function AboutHero(props) {
+  console.log("test 2", props.image)
   return (
     <Section>
       <Container>
@@ -16,13 +17,13 @@ export default function AboutHero(props) {
         )}
       </Container>
       <Container width="wide">
-        {/*{props.image && (*/}
-        {/*  <GatsbyImage*/}
-        {/*    alt={props.image.alt}*/}
-        {/*    image={getImage(props.image.gatsbyImageData)}*/}
-        {/*    className={styles.aboutHeroImage}*/}
-        {/*  />*/}
-        {/*)}*/}
+        {props.image && (
+          <GatsbyImage
+            alt={props.image.alt}
+            image={getImage(props.image.gatsbyImageData)}
+            className={styles.aboutHeroImage}
+          />
+        )}
       </Container>
     </Section>
   )

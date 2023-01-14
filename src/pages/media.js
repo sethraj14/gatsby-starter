@@ -5,6 +5,7 @@ import SEOHead from "../components/head"
 import { Container, Section } from "../components/ui"
 import Gallery from "react-photo-gallery"
 import Carousel, { Modal, ModalGateway } from "react-images"
+import {photos} from "../photos/media_photos";
 
 const getPhotos = () => {
     const photos = []
@@ -22,7 +23,7 @@ const getPhotos = () => {
 export default function Media(props) {
     const { aboutPage } = props.data
 
-    const photos = getPhotos()
+    // const photos = getPhotos()
 
     const [currentImage, setCurrentImage] = useState(0)
     const [viewerIsOpen, setViewerIsOpen] = useState(false)

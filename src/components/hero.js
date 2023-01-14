@@ -66,8 +66,6 @@ export default function Hero(props) {
             </section>
 
             <Subhead as="h2">{props.subhead}</Subhead>
-            {/*<Text as="p">{props.text}</Text>*/}
-            {/*<ButtonList links={props.links} />*/}
           </Box>
         </Flex>
       </Container>
