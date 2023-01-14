@@ -87,7 +87,7 @@ export default function About(props) {
         {aboutPage.blocks.map((block) => {
           const {id, blocktype, ...componentProps} = block
           const Component = sections[blocktype] || Fallback
-          return ["AboutHero","AboutPage","AboutLeadership"].includes(blocktype) ? (
+          return ["AboutHero","AboutPage"].includes(blocktype) ? (
               <Component key={id} {...componentProps} />
           ) : null;
         })}
