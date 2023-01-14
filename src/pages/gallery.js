@@ -7,6 +7,7 @@ import Gallery from "react-photo-gallery"
 import Carousel, { Modal, ModalGateway } from "react-images"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {media} from "../components/ui.css";
+import {photos} from "../photos/gallery_photos";
 
 const getPhotos = () => {
   const photos = []
@@ -32,7 +33,7 @@ const calculateAspectRatioFit = (srcWidth, srcHeight, maxWidth, maxHeight) => {
 export default function GalleryComponent(props) {
   const { aboutPage } = props.data
 
-  const photos = getPhotos()
+  // const photos = getPhotos()
 
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
