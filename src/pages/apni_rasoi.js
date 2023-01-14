@@ -144,6 +144,7 @@ export default function ApniRasoi(props) {
             {...componentProps}
             bio={bio}
             head={"अपनी रसोई"}
+            page={'rasoi'}
             withTransition={true}
           />
         ) : null

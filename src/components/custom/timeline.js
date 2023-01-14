@@ -13,7 +13,7 @@ const Timeline = props => {
     return (
       <Flex style={classes.wrapper}>
         <Flex key={`image-${id}`} style={classes.imageWrap}>
-          <Text as="h4" variant="kicker" style={classes.image}>
+          <Text as="h2" variant="kicker" style={classes.image}>
             {text}
           </Text>
         </Flex>
@@ -78,47 +78,47 @@ const Timeline = props => {
           <SwiperSlide>
             {renderImage(
               1,
-              "Elected gram pradhan(kheda shilajit ,thana -jariya, jila hamirpur)",
+              "निर्वाचित ग्राम प्रधान (खेड़ा शिलाजीत, थाना-जरिया, जिला-हमीरपुर)\n",
               1995
             )}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(2, "Elected Jila panchayat sadashya Jalalpur", 2000)}
+            {renderImage(2, "निर्वाचित जिला पंचायत सदस्य (जलालपुर क्षेत्र)\n", 2000)}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(3, "Elected Adyaksh Jila panchayat Hamirpur", 2000)}
+            {renderImage(3, "निर्वाचित अध्यक्ष जिला पंचायत (हमीरपुर)\n", 2000)}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(4, "Elected Member of parliament (Jalaun 45)", 2009)}
+            {renderImage(4, "निर्वाचित सांसद (जालौन-45)\n", 2009)}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
               5,
-              "Nomitate Rastriye Upadyaksh Akhil Bhariiye Koli(kori) Samaj",
+              "मनोनीत-राष्ट्रीय उपाध्यक्ष अखिल भारतीय कोली (कोरी) समाज\n",
               2010
             )}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
               6,
-              "Elected Jila panchayat Sadashy(Render-jalaun)",
+              "निर्वाचित जिला पंचायत सदस्य (रेंडर-जालौन)\n",
               2021
             )}
           </SwiperSlide>
           <SwiperSlide>
-            {renderImage(7, "Elected adyaksh Jila Panchayat (jalaun)", 2021)}
+            {renderImage(7, "निर्वाचित अध्यक्ष जिला पंचायत (जालौन)\n", 2021)}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
               8,
-              "Nominate-Pradesh Adyaksh jila panchayat Sangthan (UP)",
+              "मनोनीत-प्रदेश अध्यक्ष जिला पंचायत संगठन (यूपी)\n",
               2021
             )}
           </SwiperSlide>
           <SwiperSlide>
             {renderImage(
               9,
-              "Nominate-Karya kari Rastriye Adyaksh Akhil Bhariiye Koli(kori) Samaj ",
+              "मनोनीत-कार्यकारी राष्ट्रीय अध्यक्ष अखिल भारतीय कोली (कोरी) समाज\n",
               2021
             )}
           </SwiperSlide>
@@ -138,10 +138,11 @@ const classes = {
     borderRadius: 12,
     width: 220,
     height: 200,
-    backgroundColor: "rgb(0,0,0,0.3)",
+    backgroundColor: 'rgb(0, 166, 80,0.8)',
   },
   image: {
     width: "80%",
+    fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFFFFF",
@@ -152,6 +153,6 @@ const classes = {
   },
   year: {
     fontWeight: "bold",
-    color: "white",
+    color: colors.background,
   },
 }

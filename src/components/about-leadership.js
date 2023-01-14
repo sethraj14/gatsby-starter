@@ -13,6 +13,7 @@ import {
 } from "./ui"
 
 function AboutProfile(props) {
+    console.log('test',props.image);
   return (
     <Box width="third" padding={4} center>
       {props.image && (
