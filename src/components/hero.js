@@ -42,28 +42,14 @@ export default function Hero(props) {
           </Box>
           <Box width="half">
             <Text as="h2" variant="heading" withTransition={true}>
-              {"डॉ घनश्याम अनुरागी जी"}
+              {"डॉ घनश्याम अनुरागी"}
             </Text>
-            <section className="animation">
-              <Text
-                className="first"
-                as="h2"
-                variant="heading"
-                center={false}
-                withTransition={false}
-              >
-                {"पूर्व सांसद"}
-              </Text>
-              <Text
-                className="second"
-                as="h2"
-                variant="heading"
-                {...props}
-                withTransition={false}
-              >
-                {"अध्यक्ष जिला पंचायत - जालौन"}
-              </Text>
-            </section>
+            <Text as="h2" style={{textAlign: 'right', marginRight: 40}} variant={"subhead"} withTransition={true}>
+              {"(पूर्व सांसद)"}
+            </Text>
+            <Text as="h2" variant="heading" {...props} withTransition={false}>
+              {"अध्यक्ष जिला पंचायत - जालौन"}
+            </Text>
 
             <Subhead as="h2">{props.subhead}</Subhead>
           </Box>

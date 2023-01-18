@@ -422,6 +422,7 @@ export const link = style({
 export const navlink = style({
   color: "inherit",
   fontWeight: 'bold',
+  fontSize: 18,
   textDecoration: "none",
   transitionProperty: "color",
   transitionDuration: "0.2s",

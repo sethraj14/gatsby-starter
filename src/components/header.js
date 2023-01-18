@@ -21,6 +21,7 @@ import {
 } from "./header.css"
 import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
+import {colors} from "../colors.css";
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -60,7 +61,13 @@ export default function Header() {
   `)
 
   const { navItems, cta } = data.layout.header
-  const [isOpen, setOpen] = React.useState(false)
+  const [isOpen, setOpen] = React.useState(false);
+  let location = '';
+  if(typeof window !== 'undefined'){
+     location = window?.location?.pathname;
+  }
+
+  console.log('test',location === '/about/');
 
   React.useEffect(() => {
     if (isOpen) {
@@ -81,19 +88,19 @@ export default function Header() {
           </NavLink>
           <nav>
             <FlexList gap={6}>
-              <li key={"nav-1"} style={{color: '#F47216'}}>
+              <li key={"nav-1"} style={{color: location === '/' ? colors.active  : colors.background}}>
                 <NavLink to={"/"}>{"Home"}</NavLink>
               </li>
-              <li key={"nav-2"} style={{color: '#F47216'}}>
+              <li key={"nav-2"}  style={{color: location === '/about/' ? colors.active  : colors.background}}>
                 <NavLink to={"/about"}>{"Biography"}</NavLink>
               </li>
-              <li key={"nav-3"} style={{color: '#F47216'}}>
+              <li key={"nav-3"}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
-              <li key={"nav-4"} style={{color: '#F47216'}}>
+              <li key={"nav-4"}  style={{color: location === '/media/' ? colors.active  : colors.background}}>
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
-              <li key={"nav-5"} style={{color: '#F47216'}}>
+              <li key={"nav-5"} style={{color: location === '/apni_rasoi/' ? colors.active  : colors.background}}>
                 <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
               </li>
               {/*<li key={"nav-6"} style={{color: '#F47216'}}>*/}
@@ -144,24 +151,21 @@ export default function Header() {
         <div className={mobileNavOverlay}>
           <nav>
             <FlexList responsive variant="stretch">
-              <li key={"nav-1"} className={mobileNavLink} style={{color: '#F47216'}}>
+              <li key={"nav-1"} className={mobileNavLink} style={{color: location === '/' ? colors.active  : colors.background}}>
                 <NavLink to={"/"}>{"Home"}</NavLink>
               </li>
-              <li key={"nav-2"} className={mobileNavLink} style={{color: '#F47216'}}>
+              <li key={"nav-2"} className={mobileNavLink} style={{color: location === '/about/' ? colors.active  : colors.background}}>
                 <NavLink to={"/about"}>{"Biography"}</NavLink>
               </li>
-              <li key={"nav-3"} className={mobileNavLink}  style={{color: '#F47216'}}>
+              <li key={"nav-3"} className={mobileNavLink}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
-              <li key={"nav-4"} className={mobileNavLink} style={{color: '#F47216'}}>
+              <li key={"nav-4"} className={mobileNavLink} style={{color: location === '/media/' ? colors.active  : colors.background}}>
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
-              <li key={"nav-5"} className={mobileNavLink} style={{color: '#F47216'}}>
+              <li key={"nav-5"} className={mobileNavLink} style={{color: location === '/apni_rasoi/' ? colors.active  : colors.background}}>
                 <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
               </li>
-              {/*<li key={"nav-6"} className={mobileNavLink} style={{color: '#F47216'}}>*/}
-              {/*  <NavLink to={"/contact"}>{"Contact"}</NavLink>*/}
-              {/*</li>*/}
             </FlexList>
           </nav>
         </div>

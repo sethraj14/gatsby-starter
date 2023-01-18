@@ -11,6 +11,8 @@ import "../style.css"
 import Gallery from "../components/custom/gallery"
 import { Box, Container, Flex, Section, Subhead, Text } from "../components/ui"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Rasoi from "../components/custom/rasoi"
+import {colors} from "../colors.css";
 
 const bio =
   "" +
@@ -121,7 +123,7 @@ export default function ApniRasoi(props) {
                 </div>
                 <div className="second">
                   <Text as="h2" variant="heading">
-                    {"डॉ घनश्याम अनुरागी जी"}
+                    {"डॉ घनश्याम अनुरागी"}
                   </Text>
                   <Text as="h2" variant="heading" center={false}>
                     {"पूर्व सांसद"}
@@ -144,11 +146,72 @@ export default function ApniRasoi(props) {
             {...componentProps}
             bio={bio}
             head={"अपनी रसोई"}
-            page={'rasoi'}
+            page={"rasoi"}
             withTransition={true}
           />
         ) : null
       })}
+      <Rasoi />
+      <Section>
+        <Container>
+          <Text
+              data-sal="slide-right"
+              data-sal-delay="300"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
+              as="h2"
+              variant="heading"
+              style={{ color: colors.background }}
+          >
+            {"Stay Connected"}
+          </Text>
+            <div
+                className="fb-page"
+                data-href="https://www.facebook.com/ghanshyamanuragi1972"
+                data-tabs="timeline"
+                data-width="1000"
+                data-height="1000"
+                // data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="true"
+            >
+              <blockquote
+                  cite="https://www.facebook.com/ghanshyamanuragi1972"
+                  className="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/ghanshyamanuragi1972">
+                  {'Apni Rasoi'}
+                </a>
+              </blockquote>
+            </div>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Text
+              data-sal="slide-right"
+              data-sal-delay="300"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
+              as="h2"
+              variant="heading"
+              style={{ color: colors.black }}
+          >
+            {"Location"}
+          </Text>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14344.514292264063!2d79.4526291!3d25.9966053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2683a30663c61b8!2sApni%20Rasoi!5e0!3m2!1sen!2sin!4v1674074924005!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Container>
+      </Section>
     </Layout>
   )
 }
@@ -181,3 +244,12 @@ export const query = graphql`
     }
   }
 `
+
+
+const styles={
+  fb:{
+    // justifyContent: 'center',
+    // display: 'flex',
+    // width: '100%',
+  }
+}

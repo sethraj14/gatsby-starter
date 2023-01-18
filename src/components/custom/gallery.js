@@ -34,7 +34,7 @@ const Gallery = props => {
     )
   }
 
-  const galleryArr = new Array(62).fill("image")
+  const galleryArr = [91, 84, 87, 105, 5, 59, 60,8, 15, 92,43, 58,20];
 
   return (
     <Section>
@@ -100,11 +100,9 @@ const Gallery = props => {
           onSwiper={swiper => console.log(swiper)}
         >
           {galleryArr.map((key, index) => {
-            return [56, 59, 5, 10, 33, 41, 54].includes(index) ? (
-              <SwiperSlide>
-                {renderImage(index, `/images/gallery/gallery_${index}.jpg`)}
-              </SwiperSlide>
-            ) : null
+            return <SwiperSlide>
+              {renderImage(key, `/images/gallery/gallery_${key}.jpg`)}
+            </SwiperSlide>;
           })}
         </Swiper>
       </Container>

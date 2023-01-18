@@ -218,7 +218,7 @@ const buttonLinks = [
   {
     id: "button-more",
     href: "/about",
-    text: "और पढ़े\n",
+    text: "आगे पढ़े\n",
   },
 ]
 
@@ -255,10 +255,12 @@ export default function StatList(props) {
             </Heading>
             {props.bio ? (
               <div
+                style={{ fontWeight: "600" }}
                 dangerouslySetInnerHTML={{ __html: props.bio || biography }}
               />
             ) : (
               <div
+                style={{ fontWeight: "600" }}
                 data-sal="slide-up"
                 data-sal-delay="1000"
                 data-sal-duration="1000"
@@ -283,55 +285,61 @@ export default function StatList(props) {
                   image={getImage(props.img.gatsbyImageData)}
                 />
               </Nudge>
-            ) : props.page === 'rasoi' ? (
+            ) : props.page === "rasoi" ? (
               <>
-                <Nudge right={5} bottom={5}>
-                  {/*<GatsbyImage*/}
-                  {/*  alt={props.image.alt}*/}
-                  {/*  image={getImage(props.image.gatsbyImageData)}*/}
-                  {/*/>*/}
+                <Nudge bottom={5}>
                   <GatsbyImage
                     alt={rasoi_6.alt}
                     image={getImage(rasoi_6.gatsbyImageData)}
                   />
-                </Nudge>
-                <Nudge right={5} bottom={5}>
                   <GatsbyImage
-                    alt={rasoi_1.alt}
-                    image={getImage(rasoi_1.gatsbyImageData)}
+                      alt={rasoi_1.alt}
+                      image={getImage(rasoi_1.gatsbyImageData)}
                   />
+                    <GatsbyImage
+                      alt={rasoi_2.alt}
+                      image={getImage(rasoi_2.gatsbyImageData)}
+                    />
                 </Nudge>
-                <Nudge right={5} bottom={5}>
-                  <GatsbyImage
-                    alt={rasoi_2.alt}
-                    image={getImage(rasoi_2.gatsbyImageData)}
-                  />
-                </Nudge>
-                <Nudge right={5} bottom={5}>
-                  <GatsbyImage
-                    alt={rasoi_3.alt}
-                    image={getImage(rasoi_3.gatsbyImageData)}
-                  />
-                </Nudge>
-                <Nudge right={5} bottom={5}>
-                  <GatsbyImage
-                    alt={rasoi_4.alt}
-                    image={getImage(rasoi_4.gatsbyImageData)}
-                  />
-                </Nudge>
-                <Nudge right={5} bottom={5}>
-                  <GatsbyImage
-                    alt={rasoi_5.alt}
-                    image={getImage(rasoi_5.gatsbyImageData)}
-                  />
-                </Nudge>
+                {/*<Nudge right={5} bottom={5}>*/}
+                {/*  <GatsbyImage*/}
+                {/*    alt={rasoi_1.alt}*/}
+                {/*    image={getImage(rasoi_1.gatsbyImageData)}*/}
+                {/*  />*/}
+                {/*</Nudge>*/}
+                {/*<Nudge right={5} bottom={5}>*/}
+                {/*  <GatsbyImage*/}
+                {/*    alt={rasoi_2.alt}*/}
+                {/*    image={getImage(rasoi_2.gatsbyImageData)}*/}
+                {/*  />*/}
+                {/*</Nudge>*/}
+                {/*<Nudge right={5} bottom={5}>*/}
+                {/*  <GatsbyImage*/}
+                {/*    alt={rasoi_3.alt}*/}
+                {/*    image={getImage(rasoi_3.gatsbyImageData)}*/}
+                {/*  />*/}
+                {/*</Nudge>*/}
+                {/*<Nudge right={5} bottom={5}>*/}
+                {/*  <GatsbyImage*/}
+                {/*    alt={rasoi_4.alt}*/}
+                {/*    image={getImage(rasoi_4.gatsbyImageData)}*/}
+                {/*  />*/}
+                {/*</Nudge>*/}
+                {/*<Nudge right={5} bottom={5}>*/}
+                {/*  <GatsbyImage*/}
+                {/*    alt={rasoi_5.alt}*/}
+                {/*    image={getImage(rasoi_5.gatsbyImageData)}*/}
+                {/*  />*/}
+                {/*</Nudge>*/}
               </>
-            ) : props.image ? <Nudge right={5} bottom={5}>
-              <GatsbyImage
+            ) : props.image ? (
+              <Nudge right={5} bottom={5}>
+                <GatsbyImage
                   alt={image.alt}
                   image={getImage(props.image.gatsbyImageData)}
-              />
-            </Nudge> : (
+                />
+              </Nudge>
+            ) : (
               <Nudge right={5} bottom={5}>
                 <GatsbyImage
                   alt={image.alt}

@@ -76,7 +76,7 @@ const img = {
         "width": 2429,
         "height": 3960.9999999999995
     },
-    "alt": "डॉ घनश्याम अनुरागी जी"
+    "alt": "डॉ घनश्याम अनुरागी"
 };
 
 export default function About(props) {
@@ -91,7 +91,7 @@ export default function About(props) {
               <Component key={id} {...componentProps} />
           ) : null;
         })}
-        <StatList head={'घनश्याम अनुरागी जी की जीवनी'} bio={bio} withTransition={false} img={img}/>
+        <StatList head={'घनश्याम अनुरागी की जीवनी'} bio={bio} withTransition={false} img={img}/>
       </Layout>
   )
 }
