@@ -4,6 +4,16 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const myCustomQueries = {
+  xs: '(max-width: 320px)',
+  small: '(max-width: 640px)',
+  sm: '(max-width: 720px)',
+  md: '(max-width: 1024px)',
+  l: '(max-width: 1536px)',
+  portrait: '(orientation: portrait)',
+};
+
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.ghanshyamanuragi.in/",
@@ -51,6 +61,12 @@ module.exports = {
         cookieDomain: "www.ghanshyamanuragi.in",
         // defaults to false
         enableWebVitalsTracking: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+        queries: myCustomQueries,
       },
     },
     "gatsby-plugin-sharp",

@@ -40,8 +40,8 @@ const Gallery = props => {
     <Section>
       <Container>
         <Text
-          data-sal="slide-right"
-          data-sal-delay="300"
+          data-sal="slide-up"
+          data-sal-delay="100"
           data-sal-duration="1000"
           data-sal-easing="ease"
           as="h2"
@@ -52,7 +52,7 @@ const Gallery = props => {
         </Text>
         <Swiper
           data-sal="fade"
-          data-sal-delay="300"
+          data-sal-delay="100"
           data-sal-duration="1000"
           data-sal-easing="ease"
           modules={[Autoplay, Navigation, Pagination]}

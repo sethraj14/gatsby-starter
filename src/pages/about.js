@@ -89,7 +89,7 @@ export default function About(props) {
           const Component = sections[blocktype] || Fallback
           return ["AboutHero","AboutPage"].includes(blocktype) ? (
               <Component key={id} {...componentProps} />
-          ) : null;
+          ) :null;
         })}
         <StatList head={'जीवनी'} bio={bio} withTransition={false} img={img}/>
       </Layout>

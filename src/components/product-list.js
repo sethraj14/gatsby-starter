@@ -31,6 +31,7 @@ function Product(props) {
 }
 
 export default function ProductList(props) {
+  console.log('test',props.content);
   return (
     <Section>
       <Container>

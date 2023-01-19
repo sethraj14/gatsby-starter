@@ -20,3 +20,13 @@ export const statContainer = style({
     },
   },
 })
+
+
+export const contactStyles = style({
+  width: "100%",
+  "@media": {
+    [media.small]: {
+      width: "100%",
+    },
+  },
+});

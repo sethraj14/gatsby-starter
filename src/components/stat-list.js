@@ -225,8 +225,8 @@ const buttonLinks = [
 export default function StatList(props) {
   const transitionProps = props.withTransition
     ? {
-        "data-sal": "zoom-in",
-        "data-sal-delay": "200",
+        "data-sal": "fade",
+        "data-sal-delay": "100",
         "data-sal-duration": "1000",
         "data-sal-easing": "ease",
       }
@@ -246,7 +246,7 @@ export default function StatList(props) {
             {/*)}*/}
             <Heading
               data-sal="slide-up"
-              data-sal-delay="400"
+              data-sal-delay="100"
               data-sal-duration="1000"
               data-sal-easing="ease"
             >
@@ -262,7 +262,7 @@ export default function StatList(props) {
               <div
                 style={{ fontWeight: "600" }}
                 data-sal="slide-up"
-                data-sal-delay="1000"
+                data-sal-delay="200"
                 data-sal-duration="1000"
                 data-sal-easing="ease"
                 dangerouslySetInnerHTML={{ __html: props.bio || biography }}

@@ -9,10 +9,61 @@ import Media from "../components/custom/media"
 
 import "../style.css"
 import Gallery from "../components/custom/gallery"
-import { Box, Container, Flex, Section, Subhead, Text } from "../components/ui"
+import {
+  Box,
+  Container,
+  Flex,
+  FlexList,
+  Heading,
+  Section,
+  Subhead,
+  Text,
+} from "../components/ui"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Rasoi from "../components/custom/rasoi"
-import {colors} from "../colors.css";
+import { colors } from "../colors.css"
+import { IoCall, MdEmail, MdLocationOn } from "react-icons/all"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import { Product } from "../components/cta"
+
+const contactDetails = [
+  {
+    id: "cc92ffcb-a209-545c-8a95-60c210e07e5e",
+    heading: "Address",
+    text: " 3338, Alaukik Bhavan, Patel Nagar - Rajendra Nagar Link Rd, Near Jila Panchayat, Officers Colony, Orai, Uttar Pradesh 285001",
+    icon: (
+      <a
+        style={{ color: colors.background }}
+        href="https://goo.gl/maps/ZpWYA29nbsGthJRDA"
+      >
+        <MdLocationOn size={32} />
+      </a>
+    ),
+  },
+  {
+    id: "380a631f-cdc0-5e20-9404-525cd39b29b5",
+    heading: "Phone Number",
+    text: "+91-9415144666",
+    icon: (
+      <a style={{ color: colors.background }} href="tel:+919415144666">
+        <IoCall size={32} />
+      </a>
+    ),
+  },
+  {
+    id: "6fdbcc5e-9d30-5bb5-961f-00a6f555e3d2",
+    heading: "Email Address",
+    text: "contact@ghanshyamanuragi.in",
+    icon: (
+      <a
+        style={{ color: colors.background }}
+        href="mailto:contact@ghanshyamanuragi.in"
+      >
+        <MdEmail size={32} />
+      </a>
+    ),
+  },
+]
 
 const bio =
   "" +
@@ -84,6 +135,7 @@ const image = {
 }
 export default function ApniRasoi(props) {
   const { homepage } = props.data
+  const breakpoints = useBreakpoint()
 
   return (
     <Layout>
@@ -112,8 +164,8 @@ export default function ApniRasoi(props) {
               data-sal-delay="1000"
               data-sal-easing="ease"
             >
-              <section className="animation-2">
-                <div className="first">
+              <section>
+                <div>
                   <Text as="h2" variant="heading">
                     {'"घनश्याम अनुरागी ने ठाना है'}
                   </Text>
@@ -121,17 +173,17 @@ export default function ApniRasoi(props) {
                     {'हर भूखे को भोजन खिलाना है"'}
                   </Text>
                 </div>
-                <div className="second">
-                  <Text as="h2" variant="heading">
-                    {"डॉ घनश्याम अनुरागी"}
-                  </Text>
-                  <Text as="h2" style={{textAlign: 'right', marginRight: 40}} variant={"subhead"} withTransition={true}>
-                    {"(पूर्व सांसद)"}
-                  </Text>
-                  <Text as="h2" variant="heading" {...props}>
-                    {"अध्यक्ष जिला पंचायत - जालौन"}
-                  </Text>
-                </div>
+                {/*<div className="second">*/}
+                {/*  <Text as="h2" variant="heading">*/}
+                {/*    {"डॉ घनश्याम अनुरागी"}*/}
+                {/*  </Text>*/}
+                {/*  <Text as="h2" style={{textAlign: 'right', marginRight: 40}} variant={"subhead"} withTransition={true}>*/}
+                {/*    {"(पूर्व सांसद)"}*/}
+                {/*  </Text>*/}
+                {/*  <Text as="h2" variant="heading" {...props}>*/}
+                {/*    {"अध्यक्ष जिला पंचायत - जालौन"}*/}
+                {/*  </Text>*/}
+                {/*</div>*/}
               </section>
             </Box>
           </Flex>
@@ -152,55 +204,69 @@ export default function ApniRasoi(props) {
         ) : null
       })}
       <Rasoi />
-      {/*<Section>*/}
-      {/*  <Container>*/}
-      {/*    <Text*/}
-      {/*        data-sal="slide-right"*/}
-      {/*        data-sal-delay="300"*/}
-      {/*        data-sal-duration="1000"*/}
-      {/*        data-sal-easing="ease"*/}
-      {/*        as="h2"*/}
-      {/*        variant="heading"*/}
-      {/*        style={{ color: colors.background }}*/}
-      {/*    >*/}
-      {/*      {"Stay Connected"}*/}
-      {/*    </Text>*/}
-      {/*      <div*/}
-      {/*          className="fb-page"*/}
-      {/*          data-href="https://www.facebook.com/ghanshyamanuragi1972"*/}
-      {/*          data-tabs="timeline"*/}
-      {/*          data-width="1000"*/}
-      {/*          data-height="1000"*/}
-      {/*          // data-small-header="true"*/}
-      {/*          data-adapt-container-width="true"*/}
-      {/*          data-hide-cover="false"*/}
-      {/*          data-show-facepile="true"*/}
-      {/*      >*/}
-      {/*        <blockquote*/}
-      {/*            cite="https://www.facebook.com/ghanshyamanuragi1972"*/}
-      {/*            className="fb-xfbml-parse-ignore"*/}
-      {/*        >*/}
-      {/*          <a href="https://www.facebook.com/ghanshyamanuragi1972">*/}
-      {/*            {'Apni Rasoi'}*/}
-      {/*          </a>*/}
-      {/*        </blockquote>*/}
-      {/*      </div>*/}
-      {/*  </Container>*/}
-      {/*</Section>*/}
-
       <Section>
         <Container>
           <Text
-              data-sal="slide-right"
-              data-sal-delay="300"
-              data-sal-duration="1000"
-              data-sal-easing="ease"
-              as="h2"
-              variant="heading"
-              style={{ color: colors.black }}
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-duration="1000"
+            data-sal-easing="ease"
+            as="h2"
+            variant="heading"
+            style={{ color: colors.background }}
           >
-            {"Location"}
+            {"Stay Connected"}
           </Text>
+          <div
+            className="fb-page"
+            data-href="https://www.facebook.com/ghanshyamanuragi1972"
+            data-tabs="timeline"
+            data-width="1000"
+            data-height="1000"
+            // data-small-header="true"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/ghanshyamanuragi1972"
+              className="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/ghanshyamanuragi1972">
+                {"Apni Rasoi"}
+              </a>
+            </blockquote>
+          </div>
+        </Container>
+      </Section>
+      <Container width="fullbleed">
+        <Section
+          radius="large"
+          background="primary"
+          style={{ paddingBottom: 0 }}
+        >
+          <Heading center>{"Contact Now"}</Heading>
+          <FlexList
+            gap={4}
+            variant="responsive"
+            style={{
+              marginBottom: "32px",
+              marginTop: "44px",
+              padding: "0px 20px",
+            }}
+          >
+            {contactDetails.map(product => (
+              <li
+                key={product.id}
+                style={{
+                  width: breakpoints.small ? "100%" : "33%",
+                  height: breakpoints.small ? "250px" : "200px",
+                }}
+              >
+                <Product {...product} />
+              </li>
+            ))}
+          </FlexList>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14344.514292264063!2d79.4526291!3d25.9966053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2683a30663c61b8!2sApni%20Rasoi!5e0!3m2!1sen!2sin!4v1674074924005!5m2!1sen!2sin"
             width="100%"
@@ -210,8 +276,33 @@ export default function ApniRasoi(props) {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </Container>
-      </Section>
+        </Section>
+      </Container>
+      {/*<Section>*/}
+
+      {/*  <Container>*/}
+      {/*    <Text*/}
+      {/*        data-sal="slide-right"*/}
+      {/*        data-sal-delay="300"*/}
+      {/*        data-sal-duration="1000"*/}
+      {/*        data-sal-easing="ease"*/}
+      {/*        as="h2"*/}
+      {/*        variant="heading"*/}
+      {/*        style={{ color: colors.black }}*/}
+      {/*    >*/}
+      {/*      {"Location"}*/}
+      {/*    </Text>*/}
+      {/*    <iframe*/}
+      {/*      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14344.514292264063!2d79.4526291!3d25.9966053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2683a30663c61b8!2sApni%20Rasoi!5e0!3m2!1sen!2sin!4v1674074924005!5m2!1sen!2sin"*/}
+      {/*      width="100%"*/}
+      {/*      height="450"*/}
+      {/*      style={{ border: 0 }}*/}
+      {/*      allowFullScreen=""*/}
+      {/*      loading="lazy"*/}
+      {/*      referrerPolicy="no-referrer-when-downgrade"*/}
+      {/*    ></iframe>*/}
+      {/*  </Container>*/}
+      {/*</Section>*/}
     </Layout>
   )
 }
@@ -245,11 +336,10 @@ export const query = graphql`
   }
 `
 
-
-const styles={
-  fb:{
+const styles = {
+  fb: {
     // justifyContent: 'center',
     // display: 'flex',
     // width: '100%',
-  }
+  },
 }
