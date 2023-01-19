@@ -26,12 +26,25 @@ export default function Feature(props) {
             )}
           </Box>
           <Box width="half">
-            <Subhead>
+            <Subhead
+              data-sal={props.flip ? "slide-left" : "slide-right"}
+              data-sal-delay="400"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
+            >
               {props.kicker && <Kicker>{props.kicker}</Kicker>}
               {props.heading}
             </Subhead>
-            <Text variant="lead">{props.text}</Text>
-            <ButtonList links={props.links} />
+            <Text
+              data-sal={props.flip ? "slide-left" : "slide-right"}
+              data-sal-delay="400"
+              data-sal-duration="1000"
+              data-sal-easing="ease"
+              variant="lead"
+            >
+              {props.text}
+            </Text>
+            {/*<ButtonList links={props.links} />*/}
           </Box>
         </Flex>
       </Container>

@@ -273,10 +273,10 @@ export default function StatList(props) {
           <Box
             width="half"
             center={true}
-            data-sal="slide-up"
-            data-sal-duration="100"
-            data-sal-delay="1000"
-            data-sal-easing="ease"
+            // data-sal="slide-up"
+            // data-sal-duration="100"
+            // data-sal-delay="1000"
+            // data-sal-easing="ease"
           >
             {props.img ? (
               <Nudge right={5} bottom={5}>

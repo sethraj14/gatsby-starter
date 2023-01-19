@@ -147,46 +147,46 @@ export default function ApniRasoi(props) {
             bio={bio}
             head={"अपनी रसोई"}
             page={"rasoi"}
-            withTransition={true}
+            withTransition={false}
           />
         ) : null
       })}
       <Rasoi />
-      <Section>
-        <Container>
-          <Text
-              data-sal="slide-right"
-              data-sal-delay="300"
-              data-sal-duration="1000"
-              data-sal-easing="ease"
-              as="h2"
-              variant="heading"
-              style={{ color: colors.background }}
-          >
-            {"Stay Connected"}
-          </Text>
-            <div
-                className="fb-page"
-                data-href="https://www.facebook.com/ghanshyamanuragi1972"
-                data-tabs="timeline"
-                data-width="1000"
-                data-height="1000"
-                // data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true"
-            >
-              <blockquote
-                  cite="https://www.facebook.com/ghanshyamanuragi1972"
-                  className="fb-xfbml-parse-ignore"
-              >
-                <a href="https://www.facebook.com/ghanshyamanuragi1972">
-                  {'Apni Rasoi'}
-                </a>
-              </blockquote>
-            </div>
-        </Container>
-      </Section>
+      {/*<Section>*/}
+      {/*  <Container>*/}
+      {/*    <Text*/}
+      {/*        data-sal="slide-right"*/}
+      {/*        data-sal-delay="300"*/}
+      {/*        data-sal-duration="1000"*/}
+      {/*        data-sal-easing="ease"*/}
+      {/*        as="h2"*/}
+      {/*        variant="heading"*/}
+      {/*        style={{ color: colors.background }}*/}
+      {/*    >*/}
+      {/*      {"Stay Connected"}*/}
+      {/*    </Text>*/}
+      {/*      <div*/}
+      {/*          className="fb-page"*/}
+      {/*          data-href="https://www.facebook.com/ghanshyamanuragi1972"*/}
+      {/*          data-tabs="timeline"*/}
+      {/*          data-width="1000"*/}
+      {/*          data-height="1000"*/}
+      {/*          // data-small-header="true"*/}
+      {/*          data-adapt-container-width="true"*/}
+      {/*          data-hide-cover="false"*/}
+      {/*          data-show-facepile="true"*/}
+      {/*      >*/}
+      {/*        <blockquote*/}
+      {/*            cite="https://www.facebook.com/ghanshyamanuragi1972"*/}
+      {/*            className="fb-xfbml-parse-ignore"*/}
+      {/*        >*/}
+      {/*          <a href="https://www.facebook.com/ghanshyamanuragi1972">*/}
+      {/*            {'Apni Rasoi'}*/}
+      {/*          </a>*/}
+      {/*        </blockquote>*/}
+      {/*      </div>*/}
+      {/*  </Container>*/}
+      {/*</Section>*/}
 
       <Section>
         <Container>

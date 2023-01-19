@@ -91,7 +91,7 @@ export default function About(props) {
               <Component key={id} {...componentProps} />
           ) : null;
         })}
-        <StatList head={'घनश्याम अनुरागी की जीवनी'} bio={bio} withTransition={false} img={img}/>
+        <StatList head={'जीवनी'} bio={bio} withTransition={false} img={img}/>
       </Layout>
   )
 }
