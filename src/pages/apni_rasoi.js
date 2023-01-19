@@ -125,8 +125,8 @@ export default function ApniRasoi(props) {
                   <Text as="h2" variant="heading">
                     {"डॉ घनश्याम अनुरागी"}
                   </Text>
-                  <Text as="h2" variant="heading" center={false}>
-                    {"पूर्व सांसद"}
+                  <Text as="h2" style={{textAlign: 'right', marginRight: 40}} variant={"subhead"} withTransition={true}>
+                    {"(पूर्व सांसद)"}
                   </Text>
                   <Text as="h2" variant="heading" {...props}>
                     {"अध्यक्ष जिला पंचायत - जालौन"}
