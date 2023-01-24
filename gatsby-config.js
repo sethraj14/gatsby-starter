@@ -81,6 +81,20 @@ module.exports = {
         defer: true
       }
     },
+    // {
+    //   resolve: `gatsby-plugin-addsocialshare-share`,
+    //   options: {
+    //     size: 28,
+    //     providers:{"facebook":"Facebook","whatsapp":"Whatsapp","twitter":"Twitter","sms":"SMS","telegram":"Telegram","copylink":"Copy Link"},
+    //     corners:"5%",
+    //     // bgcolor:"#F47216",
+    //     interfacetype: "floating", //inline,floating
+    //     topoffset: "30%", //work only floating interface
+    //     id: ".ass_interface",
+    //     alignment_desktop: "left", //left,right,hide
+    //     alignment_mobile: "bottom", //top,bottom,hide
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

@@ -97,6 +97,9 @@ export default function Header() {
               <li key={"nav-3"}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
+              <li key={"nav-3"}  style={{color: location === '/video-gallery/' ? colors.active  : colors.background}}>
+                <NavLink to={"/video-gallery"}>{"Videos"}</NavLink>
+              </li>
               <li key={"nav-4"}  style={{color: location === '/media/' ? colors.active  : colors.background}}>
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
@@ -159,6 +162,9 @@ export default function Header() {
               </li>
               <li key={"nav-3"} className={mobileNavLink}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
+              </li>
+              <li key={"nav-3"} className={mobileNavLink}  style={{color: location === '/video-gallery/' ? colors.active  : colors.background}}>
+                <NavLink to={"/video-gallery"}>{"Videos"}</NavLink>
               </li>
               <li key={"nav-4"} className={mobileNavLink} style={{color: location === '/media/' ? colors.active  : colors.background}}>
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>

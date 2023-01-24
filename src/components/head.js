@@ -16,6 +16,13 @@ export default function Head({ title, description, image }) {
       {image && <meta property="og:image" content={image.url} />}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charSet="utf-8"
+      ></script>
+      <script src="https://embedsocial.com/js/iframe.js"></script>
+      {/*<script>iFrameResize();</script>*/}
       <div id="fb-root"></div>
       <script
         async

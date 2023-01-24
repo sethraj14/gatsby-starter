@@ -422,13 +422,18 @@ export const link = style({
 export const navlink = style({
   color: "inherit",
   fontWeight: 'bold',
-  fontSize: 18,
+  fontSize: 16,
   textDecoration: "none",
   transitionProperty: "color",
   transitionDuration: "0.2s",
   transitionTimingFunction: "ease-in-out",
   ":hover": {
     color: theme.colors.active,
+  },
+  "@media": {
+    [media.medium]: {
+      fontSize: 14,
+    },
   },
 })
 

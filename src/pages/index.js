@@ -9,7 +9,7 @@ import Media from "../components/custom/media"
 
 import "../style.css"
 import Gallery from "../components/custom/gallery"
-import { Container, Section, Text } from "../components/ui"
+import { Box, Container, Flex, Section, Text } from "../components/ui"
 import { colors } from "../colors.css"
 import HomepageCta from "../components/cta"
 import Videos from "../components/custom/videos"
@@ -27,8 +27,69 @@ export default function Homepage(props) {
       })}
       <Timeline />
       <Gallery />
-      {/*<Videos />*/}
+      <Videos />
       <Media />
+      <Section>
+        <Container>
+          <Text
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-duration="1000"
+            data-sal-easing="ease"
+            as="h2"
+            variant="heading"
+            style={{ color: colors.background }}
+          >
+            {"Stay Connected"}
+          </Text>
+          <Flex gap={4} variant="responsive">
+            <Box width="half" center={true}>
+              <a
+                className="twitter-timeline"
+                data-width={"500"}
+                data-height={"700"}
+                href="https://twitter.com/MpAnuragi?ref_src=twsrc%5Etfw"
+              >
+                Tweets by MpAnuragi
+              </a>
+            </Box>
+            <Box width="half" center={true}>
+
+              <iframe
+                width="100%"
+                height="700"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                src="https://embedsocial.com/api/pro_hashtag/d62771dbabe8e95eb6ba947e22401b321ee0d479"
+              ></iframe>
+
+            </Box>
+            {/*<Box width="half" center={true}>*/}
+            {/*  <div*/}
+            {/*    className="fb-page"*/}
+            {/*    data-href="https://www.facebook.com/ghanshyamanuragi1972"*/}
+            {/*    data-tabs="timeline"*/}
+            {/*    data-width="500"*/}
+            {/*    data-height={"1000"}*/}
+            {/*    // data-small-header="true"*/}
+            {/*    data-adapt-container-width="true"*/}
+            {/*    data-hide-cover="false"*/}
+            {/*    data-show-facepile="true"*/}
+            {/*  >*/}
+            {/*    <blockquote*/}
+            {/*      cite="https://www.facebook.com/ghanshyamanuragi1972"*/}
+            {/*      className="fb-xfbml-parse-ignore"*/}
+            {/*    >*/}
+            {/*      <a href="https://www.facebook.com/ghanshyamanuragi1972">*/}
+            {/*        {"Apni Rasoi"}*/}
+            {/*      </a>*/}
+            {/*    </blockquote>*/}
+            {/*  </div>*/}
+            {/*</Box>*/}
+          </Flex>
+        </Container>
+      </Section>
       <HomepageCta />
     </Layout>
   )

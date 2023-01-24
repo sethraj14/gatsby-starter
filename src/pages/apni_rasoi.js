@@ -25,6 +25,7 @@ import { colors } from "../colors.css"
 import { IoCall, MdEmail, MdLocationOn } from "react-icons/all"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import { Product } from "../components/cta"
+import Videos from "../components/custom/videos";
 
 const contactDetails = [
   {
@@ -137,6 +138,7 @@ export default function ApniRasoi(props) {
   const { homepage } = props.data
   const breakpoints = useBreakpoint()
 
+  const videoArr = [1, 2, 4, 6, 7,11];
   return (
     <Layout>
       <Section>
@@ -204,41 +206,56 @@ export default function ApniRasoi(props) {
         ) : null
       })}
       <Rasoi />
-      <Section>
-        <Container>
-          <Text
-            data-sal="slide-up"
-            data-sal-delay="100"
-            data-sal-duration="1000"
-            data-sal-easing="ease"
-            as="h2"
-            variant="heading"
-            style={{ color: colors.background }}
-          >
-            {"Stay Connected"}
-          </Text>
-          <div
-            className="fb-page"
-            data-href="https://www.facebook.com/ghanshyamanuragi1972"
-            data-tabs="timeline"
-            data-width="1000"
-            data-height="1000"
-            // data-small-header="true"
-            data-adapt-container-width="true"
-            data-hide-cover="false"
-            data-show-facepile="true"
-          >
-            <blockquote
-              cite="https://www.facebook.com/ghanshyamanuragi1972"
-              className="fb-xfbml-parse-ignore"
-            >
-              <a href="https://www.facebook.com/ghanshyamanuragi1972">
-                {"Apni Rasoi"}
-              </a>
-            </blockquote>
-          </div>
-        </Container>
-      </Section>
+      <Videos videoArr={videoArr}/>
+      {/*<Section>*/}
+      {/*  <Container>*/}
+      {/*    <Text*/}
+      {/*      data-sal="slide-up"*/}
+      {/*      data-sal-delay="100"*/}
+      {/*      data-sal-duration="1000"*/}
+      {/*      data-sal-easing="ease"*/}
+      {/*      as="h2"*/}
+      {/*      variant="heading"*/}
+      {/*      style={{ color: colors.background }}*/}
+      {/*    >*/}
+      {/*      {"Stay Connected"}*/}
+      {/*    </Text>*/}
+      {/*    <Flex gap={4} variant="responsive">*/}
+      {/*      /!*<Box width="half" center={true}>*!/*/}
+      {/*      /!*  <a*!/*/}
+      {/*      /!*    className="twitter-timeline"*!/*/}
+      {/*      /!*    data-width={"500"}*!/*/}
+      {/*      /!*    data-height={"1000"}*!/*/}
+      {/*      /!*    href="https://twitter.com/MpAnuragi?ref_src=twsrc%5Etfw"*!/*/}
+      {/*      /!*  >*!/*/}
+      {/*      /!*    Tweets by MpAnuragi*!/*/}
+      {/*      /!*  </a>*!/*/}
+      {/*      /!*</Box>*!/*/}
+      {/*      <Box width="half" center={true}>*/}
+      {/*        <div*/}
+      {/*          className="fb-page"*/}
+      {/*          data-href="https://www.facebook.com/ghanshyamanuragi1972"*/}
+      {/*          data-tabs="timeline"*/}
+      {/*          data-width="500"*/}
+      {/*          data-height={"1000"}*/}
+      {/*          // data-small-header="true"*/}
+      {/*          data-adapt-container-width="true"*/}
+      {/*          data-hide-cover="false"*/}
+      {/*          data-show-facepile="true"*/}
+      {/*        >*/}
+      {/*          <blockquote*/}
+      {/*            cite="https://www.facebook.com/ghanshyamanuragi1972"*/}
+      {/*            className="fb-xfbml-parse-ignore"*/}
+      {/*          >*/}
+      {/*            <a href="https://www.facebook.com/ghanshyamanuragi1972">*/}
+      {/*              {"Apni Rasoi"}*/}
+      {/*            </a>*/}
+      {/*          </blockquote>*/}
+      {/*        </div>*/}
+      {/*      </Box>*/}
+      {/*    </Flex>*/}
+      {/*  </Container>*/}
+      {/*</Section>*/}
       <Container width="fullbleed">
         <Section
           radius="large"
@@ -278,31 +295,6 @@ export default function ApniRasoi(props) {
           ></iframe>
         </Section>
       </Container>
-      {/*<Section>*/}
-
-      {/*  <Container>*/}
-      {/*    <Text*/}
-      {/*        data-sal="slide-right"*/}
-      {/*        data-sal-delay="300"*/}
-      {/*        data-sal-duration="1000"*/}
-      {/*        data-sal-easing="ease"*/}
-      {/*        as="h2"*/}
-      {/*        variant="heading"*/}
-      {/*        style={{ color: colors.black }}*/}
-      {/*    >*/}
-      {/*      {"Location"}*/}
-      {/*    </Text>*/}
-      {/*    <iframe*/}
-      {/*      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14344.514292264063!2d79.4526291!3d25.9966053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2683a30663c61b8!2sApni%20Rasoi!5e0!3m2!1sen!2sin!4v1674074924005!5m2!1sen!2sin"*/}
-      {/*      width="100%"*/}
-      {/*      height="450"*/}
-      {/*      style={{ border: 0 }}*/}
-      {/*      allowFullScreen=""*/}
-      {/*      loading="lazy"*/}
-      {/*      referrerPolicy="no-referrer-when-downgrade"*/}
-      {/*    ></iframe>*/}
-      {/*  </Container>*/}
-      {/*</Section>*/}
     </Layout>
   )
 }

@@ -21,6 +21,8 @@ import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import "swiper/css"
 import "swiper/css/effect-fade"
+import { theme } from "../theme.css"
+import { colors } from "../colors.css"
 
 const img1 =
   "https://images.ctfassets.net/d5ql4rml3t6t/24pDVWYAGqV18dKDuEdFvb/e15ba713f75c597250652389bad7a78b/image_-_Edited.png?w=200&h=184&q=50&fm=png"
@@ -44,7 +46,16 @@ export default function Hero(props) {
             <Text as="h2" variant="heading" withTransition={true}>
               {"डॉ घनश्याम अनुरागी"}
             </Text>
-            <Text as="h2" style={{textAlign: 'right', marginRight: 40}} variant={"subhead"} withTransition={true}>
+            <Text
+              as="h2"
+              style={{
+                textAlign: "center",
+                marginLeft: 120,
+                fontSize: theme.fontSizes[5],
+              }}
+              variant={"subhead"}
+              withTransition={true}
+            >
               {"(पूर्व सांसद)"}
             </Text>
             <Text as="h2" variant="heading" {...props} withTransition={false}>
