@@ -72,8 +72,6 @@ const Timeline = props => {
               spaceBetween: 40,
             },
           }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
         >
           <SwiperSlide>
             {renderImage(

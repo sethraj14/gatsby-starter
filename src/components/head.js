@@ -22,7 +22,9 @@ export default function Head({ title, description, image }) {
         charSet="utf-8"
       ></script>
       <script src="https://embedsocial.com/js/iframe.js"></script>
-      {/*<script>iFrameResize();</script>*/}
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63d02ff670222ded"></script>
+
+        {/*<script>iFrameResize();</script>*/}
       <div id="fb-root"></div>
       <script
         async

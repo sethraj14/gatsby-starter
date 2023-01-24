@@ -35,7 +35,6 @@ export default function GalleryComponent(props) {
   const videos = getVideos()
 
   const len = videos.length
-  console.log("test 3", videos)
 
   return (
     <Layout>

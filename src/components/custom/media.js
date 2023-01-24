@@ -47,8 +47,6 @@ const Media = props => {
           navigation
           spaceBetween={60}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
           breakpoints={{
             // when window width is >= 480px
             480: {

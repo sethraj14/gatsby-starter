@@ -13,7 +13,6 @@ const getPhotos = () => {
   const photos = []
   const galleryArr = new Array(62).fill("image")
   galleryArr.forEach((t, index) => {
-    console.log('test 2',`/images/gallery/gallery_${index + 1}.jpg`);
     photos[index] = {
       src: `/images/gallery/gallery_${index + 1}.jpg`,
       width: index % 2 === 0 ? 3 : index % 3 === 0 ? 2 : 4,

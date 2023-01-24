@@ -5,23 +5,21 @@ import {
   Container,
   Flex,
   FlexList,
-  Space,
-  NavLink,
-  Button,
   InteractiveIcon,
+  NavLink,
   Nudge,
+  Space,
   VisuallyHidden,
 } from "./ui"
 import {
-  mobileNavOverlay,
-  mobileNavLink,
   desktopHeaderNavWrapper,
   mobileHeaderNavWrapper,
+  mobileNavLink,
+  mobileNavOverlay,
   mobileNavSVGColorWrapper,
 } from "./header.css"
-import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
-import {colors} from "../colors.css";
+import { colors } from "../colors.css"
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -61,13 +59,13 @@ export default function Header() {
   `)
 
   const { navItems, cta } = data.layout.header
-  const [isOpen, setOpen] = React.useState(false);
-  let location = '';
-  if(typeof window !== 'undefined'){
-     location = window?.location?.pathname;
+  const [isOpen, setOpen] = React.useState(false)
+  let location = ""
+  if (typeof window !== "undefined") {
+    location = window?.location?.pathname
   }
 
-  console.log('test',location === '/about/');
+  console.log("test", location === "/about/")
 
   React.useEffect(() => {
     if (isOpen) {
@@ -78,32 +76,74 @@ export default function Header() {
   }, [isOpen])
 
   return (
-    <header style={{backgroundColor: 'white'}}>
-      <Container className={desktopHeaderNavWrapper} >
-        <Space size={2} />
-        <Flex variant="spaceBetween">
-          <NavLink to="/">
+    <header style={{ backgroundColor: "white" }}>
+      <Container className={desktopHeaderNavWrapper}>
+        <Flex row variant="spaceBetween" style={{ paddingLeft: "25%" }}>
+          <NavLink
+            to="/"
+            style={{
+              // backgroundColor: colors.background,
+              margin: 0,
+              position: "absolute",
+              left: 10,
+              top: 0,
+              bottom: 0,
+              height: "100%",
+              // borderRight: `5px solid ${colors.active}`,
+            }}
+          >
             <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
+            <Flex
+              row
+              alignItems={"center"}
+              style={{
+                justifyContent: "center",
+                padding: "0px 20px",
+                height: "100%",
+                borderRight: "2px solid white",
+              }}
+            >
+              <BrandLogo />
+              {/*<Text*/}
+              {/*  withTransition={false}*/}
+              {/*  style={{*/}
+              {/*    color: colors.text,*/}
+              {/*    fontFamily: theme.fonts.mono,*/}
+              {/*    fontSize: theme.fontSizes[3],*/}
+              {/*    fontWeight: theme.fontWeights.extrabold,*/}
+              {/*    margin: 0,*/}
+              {/*  }}*/}
+              {/*>*/}
+              {/*  {"Ghanshyam"}*/}
+              {/*  <br />*/}
+              {/*  {"Anuragi"}*/}
+              {/*</Text>*/}
+            </Flex>
           </NavLink>
           <nav>
-            <FlexList gap={6}>
-              <li key={"nav-1"} style={{color: location === '/' ? colors.active  : colors.background}}>
+            <FlexList gap={5}>
+              <li key={"nav-1"} style={activeStyle(location === "/")}>
                 <NavLink to={"/"}>{"Home"}</NavLink>
               </li>
-              <li key={"nav-2"}  style={{color: location === '/about/' ? colors.active  : colors.background}}>
+              <li key={"nav-2"} style={activeStyle(location === "/about/")}>
                 <NavLink to={"/about"}>{"Biography"}</NavLink>
               </li>
-              <li key={"nav-3"}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
+              <li key={"nav-3"} style={activeStyle(location === "/gallery/")}>
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
-              <li key={"nav-3"}  style={{color: location === '/video-gallery/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-3"}
+                style={activeStyle(location === "/video-gallery/")}
+              >
                 <NavLink to={"/video-gallery"}>{"Videos"}</NavLink>
               </li>
-              <li key={"nav-4"}  style={{color: location === '/media/' ? colors.active  : colors.background}}>
+              <li key={"nav-4"} style={activeStyle(location === "/media/")}>
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
-              <li key={"nav-5"} style={{color: location === '/apni_rasoi/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-5"}
+                style={activeStyle(location === "/apni_rasoi/")}
+              >
                 <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
               </li>
               {/*<li key={"nav-6"} style={{color: '#F47216'}}>*/}
@@ -124,7 +164,7 @@ export default function Header() {
           >
             <NavLink to="/">
               <VisuallyHidden>Home</VisuallyHidden>
-              <BrandLogo width={40} height={40}/>
+              <BrandLogo width={40} height={40} />
             </NavLink>
           </span>
           <Flex>
@@ -144,7 +184,7 @@ export default function Header() {
                   mobileNavSVGColorWrapper[isOpen ? "reversed" : "primary"]
                 }
               >
-                {isOpen ? <X /> : <Menu color={"#F47216"}/>}
+                {isOpen ? <X /> : <Menu color={"#F47216"} />}
               </InteractiveIcon>
             </Nudge>
           </Flex>
@@ -154,22 +194,69 @@ export default function Header() {
         <div className={mobileNavOverlay}>
           <nav>
             <FlexList responsive variant="stretch">
-              <li key={"nav-1"} className={mobileNavLink} style={{color: location === '/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-1"}
+                className={mobileNavLink}
+                style={{
+                  color: location === "/" ? colors.active : colors.background,
+                }}
+              >
                 <NavLink to={"/"}>{"Home"}</NavLink>
               </li>
-              <li key={"nav-2"} className={mobileNavLink} style={{color: location === '/about/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-2"}
+                className={mobileNavLink}
+                style={{
+                  color:
+                    location === "/about/" ? colors.active : colors.background,
+                }}
+              >
                 <NavLink to={"/about"}>{"Biography"}</NavLink>
               </li>
-              <li key={"nav-3"} className={mobileNavLink}  style={{color: location === '/gallery/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-3"}
+                className={mobileNavLink}
+                style={{
+                  color:
+                    location === "/gallery/"
+                      ? colors.active
+                      : colors.background,
+                }}
+              >
                 <NavLink to={"/gallery"}>{"Gallery"}</NavLink>
               </li>
-              <li key={"nav-3"} className={mobileNavLink}  style={{color: location === '/video-gallery/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-3"}
+                className={mobileNavLink}
+                style={{
+                  color:
+                    location === "/video-gallery/"
+                      ? colors.active
+                      : colors.background,
+                }}
+              >
                 <NavLink to={"/video-gallery"}>{"Videos"}</NavLink>
               </li>
-              <li key={"nav-4"} className={mobileNavLink} style={{color: location === '/media/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-4"}
+                className={mobileNavLink}
+                style={{
+                  color:
+                    location === "/media/" ? colors.active : colors.background,
+                }}
+              >
                 <NavLink to={"/media"}>{"Media Coverage"}</NavLink>
               </li>
-              <li key={"nav-5"} className={mobileNavLink} style={{color: location === '/apni_rasoi/' ? colors.active  : colors.background}}>
+              <li
+                key={"nav-5"}
+                className={mobileNavLink}
+                style={{
+                  color:
+                    location === "/apni_rasoi/"
+                      ? colors.active
+                      : colors.background,
+                }}
+              >
                 <NavLink to={"/apni_rasoi"}>{"Apni Rasoi"}</NavLink>
               </li>
             </FlexList>
@@ -179,3 +266,9 @@ export default function Header() {
     </header>
   )
 }
+
+const activeStyle = isActive => ({
+  color: isActive ? colors.active : colors.background,
+  borderBottom: isActive ? `3px solid ${colors.active}` : "none",
+  paddingBottom: 12,
+})

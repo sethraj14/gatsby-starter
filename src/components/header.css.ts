@@ -4,13 +4,14 @@ import { media } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
   position: "relative",
+  padding: 0,
   zIndex: 1,
   display: "none",
   "@media": {
     [media.small]: {
       display: "block",
       paddingTop: theme.space[4],
-      paddingBottom: theme.space[2]
+      paddingBottom: theme.space[3]
     },
   },
 })
